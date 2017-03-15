@@ -81,10 +81,9 @@ void logic()
 
 void input () 
 {
- string keyin; 
- std::cin >> keyin 
- int check = (int) keyin ; 
- if (check){
+ std::string keyin; 
+ std::cin >> keyin;
+ std::cout << keyin << std::endl;
   switch(keyin) { 
      case 'a':
      dir = LEFT;
@@ -101,7 +100,7 @@ void input ()
      case 'x':
      gameOver = true;
      break;
-  }
+  
  }
 } 
 
