@@ -1,6 +1,6 @@
 #include <iostream> 
 #include <stdlib.h>
-#include <stdio.h>
+#include <string>
 
 
 bool gameOver;
@@ -81,8 +81,11 @@ void logic()
 
 void input () 
 {
- if (kbhit()){
-  switch(getchar()) { 
+ string keyin; 
+ std::cin >> keyin 
+ int check = (int) keyin ; 
+ if (check){
+  switch(keyin) { 
      case 'a':
      dir = LEFT;
      break;
