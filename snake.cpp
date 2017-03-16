@@ -76,37 +76,51 @@ void input ()
      case 4:
      dir = DOWN;
      break;
-     default:
-     gameOver = true;
- }
+   }
 }
 void logic() 
 {
  switch(dir) { 
   case LEFT:
   if (x != 0){
-    x--;
+     if (x == fruitX && y == fruitY) {
+         gameOver = true;
+     } else {
+       x--;
+     }
   }else {
     input();
   }
     break;
   case UP:
   if (y != 0 ) {
-    y--;
+     if (x == fruitX && y == fruitY) {
+       gameOver = true;
+     } else {
+       y--;
+     }
   }else {
     input(); 
   } 
   break;
   case DOWN:
   if ( y != 20 ) { 
-    y++;
+     if (x == fruitX && y == fruitY) {
+         gameOver = true;
+     } else {
+       y++;
+     }
   }else { 
    input();
   }
    break;
   case RIGHT:
   if (x != 20 ) { 
-    x++;
+     if (x == fruitX && y == fruitY) {
+       gameOver = true;
+     } else {
+       x++;
+     }
   }else {
     input();
   }   
