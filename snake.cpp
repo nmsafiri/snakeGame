@@ -60,43 +60,59 @@ void draw ()
   std::cout << std::endl;
 
 }
-
+void input ()
+{
+ int decision = rand() % 10;
+ switch(decision) {
+     case 1:
+     dir = LEFT;
+     break;
+     case 2:
+     dir = RIGHT;
+     break;
+     case 3:
+     dir = UP;
+     break;
+     case 4:
+     dir = DOWN;
+     break;
+     default:
+     gameOver = true;
+ }
+}
 void logic() 
 {
  switch(dir) { 
   case LEFT:
-  x--;
-  break;
+  if (x != 0){
+    x--;
+  }else {
+    input();
+  }
+    break;
   case UP:
-  y--;
+  if (y != 0 ) {
+    y--;
+  }else {
+    input(); 
+  } 
   break;
   case DOWN:
-  y++;
-  break;
+  if ( y != 20 ) { 
+    y++;
+  }else { 
+   input();
+  }
+   break;
   case RIGHT:
-  x++;
+  if (x != 20 ) { 
+    x++;
+  }else {
+    input();
+  }   
   break;
  }
 }
-
-void input () 
-{
-  int decision = rand() % 5;
-  switch(decision) { 
-     case 1:
-     dir = LEFT;
-     break;
-     case '2':
-     dir = RIGHT;
-     break;
-     case '3':
-     dir = UP;
-     break;
-     case '4':
-     dir = DOWN;
-     break;
- }
-} 
 
 int main() 
 { 
