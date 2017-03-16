@@ -81,26 +81,20 @@ void logic()
 
 void input () 
 {
- std::string keyin; 
- std::cin >> keyin;
- std::cout << keyin << std::endl;
-  switch(keyin) { 
-     case 'a':
+  int decision = rand() % 5;
+  switch(decision) { 
+     case 1:
      dir = LEFT;
      break;
-     case 'd':
+     case '2':
      dir = RIGHT;
      break;
-     case 'w':
+     case '3':
      dir = UP;
      break;
-     case 's':
+     case '4':
      dir = DOWN;
      break;
-     case 'x':
-     gameOver = true;
-     break;
-  
  }
 } 
 
@@ -108,10 +102,10 @@ int main()
 { 
 
   setup();
-  while(!gameOver){ 
+ while(!gameOver){ 
     draw();
     input();
     logic();
-  }
+ }
 
 } 
