@@ -1,7 +1,6 @@
 #include <iostream> 
 #include <stdlib.h>
-#include <string>
-
+#include <unistd.h>
 
 bool gameOver;
 const int height = 20;
@@ -136,6 +135,7 @@ int main()
     draw();
     input();
     logic();
+    sleep(1);
  }
 
 } 
